@@ -10,6 +10,12 @@ Jogo da memória simples e divertido desenvolvido com HTML5, CSS3 e JavaScript V
 - Feedback visual quando um par é encontrado.
 - Interface leve, responsiva e pronta para abrir direto no navegador.
 
+## 🌐 Demo
+
+O jogo está publicado em GitHub Pages:
+
+- https://alancostaoliveira.github.io/memory-game/
+
 ## 🚀 Tecnologias Utilizadas
 
 - **HTML5**: Estruturação dos elementos.
