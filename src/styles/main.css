@@ -1,94 +1,78 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #434142;
-  user-select: none;
-}
-
+/* Estilização do container principal para centralizar o conteúdo */
 .container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
-  background: linear-gradient(
-    325deg,
-    #03001e 0%,
-    #e30b0b 30%,
-    #5e1818 70%,
-    #fdeff9 100%
-  );
-  padding: 40px 60px;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 h2 {
   font-size: 3em;
-  color: #fff;
+  margin-bottom: 20px;
+  color: #333;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
-.reset {
-  padding: 15px 20px;
-  width: 100%;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  font-size: 1.5em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.reset:focus {
-  color: #c70707;
-  background-color: #262809;
-}
-
+/* Grid do jogo: 4 colunas para organizar as 16 cartas */
 .game {
   width: 430px;
   height: 430px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  transform-style: preserve-3d;
-  perspective: 500px;
 }
 
+/* Estilização individual de cada carta (item) */
 .item {
-  position: relative;
   width: 100px;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-
   font-size: 3em;
-  transform: rotateY(180deg);
-  transition: 0.25s;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  perspective: 1000px; /* Perspectiva individual para cada carta */
 }
 
+/* Esconde o emoji inicialmente através de uma camada visual */
 .item::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: #404040;
-  /* opacity: 0.85; */
-  transition: 0.25s;
+  background-color: #404040;
+  transition: transform 0.5s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
 }
 
-.item.boxOpen {
-  transform: rotateY(0deg);
+/* Quando a carta é aberta ou combinada, removemos a "capa" girando-a */
+.item.boxOpen::after,
+.item.boxMatch::after {
+  transform: rotateY(180deg);
 }
 
-.boxOpen::after,
-.boxMatch::after {
-  transform: rotateY(180deg);
+/* Estilo para cartas que já formaram par */
+.item.boxMatch {
+  background-color: #8fdf8f;
+}
+
+/* Estilização do botão de reset */
+.reset {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: #555;
 }

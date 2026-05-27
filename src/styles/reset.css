@@ -1,7 +1,11 @@
+/* Reset padrão para remover margens e paddings nativos do navegador */
 * {
   margin: 0;
   padding: 0;
-  outline: none;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #c9d6ff; /* Cor de fundo suave */
 }

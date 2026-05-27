@@ -1,22 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memory Game</title>
-    <link rel="stylesheet" href="./src/styles/reset.css" />
-    <link rel="stylesheet" href="./src/styles/main.css" />
+    <title>Jogo da Memória</title>
+    <!-- Importação dos estilos -->
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
   </head>
-
   <body>
     <div class="container">
-      <h2>MEMORY GAME</h2>
+      <h2>Jogo da Memória</h2>
+      <!-- Container principal onde as cartas serão geradas dinamicamente -->
       <div class="game"></div>
+      <!-- Botão de reset para reiniciar a partida -->
       <button class="reset" onclick="window.location.reload()">
         RESET GAME
       </button>
     </div>
 
-    <script src="./src/scripts/engine.js" defer></script>
+    <!-- Importação da lógica do jogo -->
+    <script src="src/scripts/engine.js" defer></script>
   </body>
 </html>
