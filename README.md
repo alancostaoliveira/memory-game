@@ -2,6 +2,8 @@
 
 Jogo da memória simples e divertido desenvolvido com HTML5, CSS3 e JavaScript Vanilla. O objetivo é encontrar todos os pares de emojis no menor tempo possível.
 
+![Demo status](https://img.shields.io/badge/demo-online-brightgreen)
+
 ## ✨ Recursos
 
 - Cartas geradas dinamicamente a cada partida.
@@ -15,6 +17,10 @@ Jogo da memória simples e divertido desenvolvido com HTML5, CSS3 e JavaScript V
 O jogo está publicado em GitHub Pages:
 
 - https://alancostaoliveira.github.io/memory-game/
+
+## 🖼️ Preview
+
+Veja a interface atual na demo publicada acima.
 
 ## 🚀 Tecnologias Utilizadas
 
